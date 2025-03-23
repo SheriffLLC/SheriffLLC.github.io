@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sheriff LLC - Software Solutions</title>
+<link rel="stylesheet" href="css/checkers.css">
 <style>
 * {
 margin: 0;
@@ -274,6 +275,19 @@ font-weight: bold;
 </div>
 </div>
 
+<div class="checkers-section" id="checkers">
+    <h2>Try Our Checkers Game</h2>
+    <p>Experience our interactive web-based checkers game powered by Python. This demo showcases our capability to create engaging interactive experiences using modern web technologies.</p>
+    
+    <div class="checkers-game">
+        <div id="game-status">Loading game...</div>
+        <div id="checkerboard"></div>
+        <div class="game-controls">
+            <button id="reset-game">Reset Game</button>
+        </div>
+    </div>
+</div>
+
 <div class="services-section">
 <h2>Our Services</h2>
 <div class="service-grid">
@@ -346,5 +360,10 @@ Project structure:
 /js
 -->
 </div>
+
+<!-- Load Pyodide -->
+<script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+<!-- Load our checkers game -->
+<script src="js/checkers.js"></script>
 </body>
 </html>

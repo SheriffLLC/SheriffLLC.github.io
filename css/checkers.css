@@ -1,0 +1,157 @@
+.checkers-section {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 50px 20px;
+    border-radius: 15px;
+    margin: 50px 0;
+    text-align: center;
+}
+
+.checkers-section h2 {
+    color: #4facfe;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+.checkers-section p {
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.checkers-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+#checkerboard {
+    display: grid;
+    grid-template-columns: repeat(8, 50px);
+    grid-template-rows: repeat(8, 50px);
+    gap: 0;
+    border: 5px solid #333;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    background: #ddd;
+    max-width: 100%;
+}
+
+.square {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.square.light {
+    background-color: #f0d9b5;
+}
+
+.square.dark {
+    background-color: #b58863;
+}
+
+.piece {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    position: relative;
+    transition: transform 0.2s;
+}
+
+.piece:hover {
+    transform: scale(1.1);
+}
+
+.piece.red {
+    background: radial-gradient(circle at 30% 30%, #ff4d4d, #cc0000);
+}
+
+.piece.black {
+    background: radial-gradient(circle at 30% 30%, #444, #000);
+}
+
+.piece.king::after {
+    content: "♔";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: gold;
+}
+
+.game-controls {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#game-status {
+    min-height: 30px;
+    font-weight: bold;
+    color: #4facfe;
+    margin: 15px 0;
+    padding: 10px 15px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    display: inline-block;
+}
+
+#reset-game {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #00f2fe, #4facfe);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#reset-game:hover {
+    transform: translateY(-3px);
+}
+
+/* Highlight valid moves */
+.valid-move-indicator {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(0, 255, 0, 0.5);
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* Allow clicks to pass through to the square underneath */
+}
+
+/* Highlight selected piece */
+.selected-piece {
+    box-shadow: 0 0 10px 3px #4facfe;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    #checkerboard {
+        grid-template-columns: repeat(8, 40px);
+        grid-template-rows: repeat(8, 40px);
+    }
+    
+    .square {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .piece {
+        width: 32px;
+        height: 32px;
+    }
+} 
