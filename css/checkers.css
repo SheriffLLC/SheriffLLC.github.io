@@ -36,6 +36,7 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     background: #ddd;
     max-width: 100%;
+    margin: 0 auto;
 }
 
 .square {
@@ -91,6 +92,9 @@
     display: flex;
     gap: 20px;
     margin-top: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 #game-status {
@@ -102,6 +106,8 @@
     background: rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     display: inline-block;
+    word-break: break-word;
+    max-width: 100%;
 }
 
 #reset-game {
@@ -139,6 +145,31 @@
 }
 
 /* Responsive adjustments */
+@media (max-width: 768px) {
+    .checkers-section h2 {
+        font-size: 2rem;
+    }
+    
+    #checkerboard {
+        grid-template-columns: repeat(8, 45px);
+        grid-template-rows: repeat(8, 45px);
+    }
+    
+    .square {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .piece {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .piece.king::after {
+        font-size: 20px;
+    }
+}
+
 @media (max-width: 600px) {
     #checkerboard {
         grid-template-columns: repeat(8, 40px);
@@ -153,5 +184,61 @@
     .piece {
         width: 32px;
         height: 32px;
+    }
+    
+    .piece.king::after {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 450px) {
+    .checkers-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    #checkerboard {
+        grid-template-columns: repeat(8, 35px);
+        grid-template-rows: repeat(8, 35px);
+    }
+    
+    .square {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .piece {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .valid-move-indicator {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .piece.king::after {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 370px) {
+    #checkerboard {
+        grid-template-columns: repeat(8, 30px);
+        grid-template-rows: repeat(8, 30px);
+    }
+    
+    .square {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .piece {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .valid-move-indicator {
+        width: 14px;
+        height: 14px;
     }
 } 
