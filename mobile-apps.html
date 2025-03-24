@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sheriff LLC - Mobile Apps</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #1a1a2e);
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+}
+
+header {
+    text-align: center;
+    padding: 50px 0;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #00f2fe, #4facfe);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    color: #4facfe;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.back-link {
+    display: inline-block;
+    margin: 20px 0;
+    color: #4facfe;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: #00f2fe;
+}
+
+.app-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.app-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    transition: transform 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-card:hover {
+    transform: translateY(-10px);
+}
+
+.app-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    margin: 0 auto 20px;
+    display: block;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+}
+
+.app-name {
+    color: #4facfe;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.app-description {
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.download-button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #00f2fe, #4facfe);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin-top: auto;
+}
+
+.download-button:hover {
+    transform: translateY(-3px);
+}
+
+.disclaimer-section {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 15px;
+    margin: 50px 0;
+}
+
+.disclaimer-section h3 {
+    color: #ff6b6b;
+    margin-bottom: 15px;
+}
+
+.disclaimer-section p {
+    margin-bottom: 15px;
+}
+
+.disclaimer-section ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .app-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    header {
+        padding: 30px 0;
+    }
+    
+    .app-card {
+        padding: 20px;
+    }
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sheriff LLC</h1>
+            <p>Mobile Applications</p>
+        </header>
+
+        <a href="index.html" class="back-link">← Back to Home</a>
+
+        <h2>Available Mobile Apps</h2>
+        <div class="app-grid">
+            <div class="app-card">
+                <div class="app-icon">📱</div>
+                <h3 class="app-name">Manga Reader</h3>
+                <p class="app-description">A powerful manga reading application with a clean interface, offline reading capabilities, and a vast library of manga titles. Perfect for manga enthusiasts on the go.</p>
+                <a href="downloads/manga/app-release.apk" class="download-button" download>Download APK</a>
+            </div>
+            
+            <div class="app-card">
+                <div class="app-icon">🎮</div>
+                <h3 class="app-name">Mobile Checkers</h3>
+                <p class="app-description">Enjoy our popular checkers game on your mobile device! Features single and multiplayer modes, various difficulty levels, and custom themes.</p>
+                <a href="#" class="download-button" style="background: linear-gradient(90deg, #aaa, #888); cursor: not-allowed;">Coming Soon</a>
+            </div>
+        </div>
+
+        <div class="disclaimer-section">
+            <h3>Important Disclaimer</h3>
+            <p>Please read the following information before downloading any applications:</p>
+            <ul>
+                <li>All applications are provided "as is" without any warranties or guarantees.</li>
+                <li>You download and install these applications at your own risk.</li>
+                <li>Sheriff LLC is not responsible for any damage that may occur to your device during installation or use.</li>
+            </ul>
+            
+            <h3>Installation Instructions</h3>
+            <p>To install APK files from unknown sources on Android:</p>
+            <ol>
+                <li>Go to <strong>Settings</strong> on your device</li>
+                <li>Select <strong>Security</strong> or <strong>Privacy</strong></li>
+                <li>Enable <strong>Unknown Sources</strong> or <strong>Install Unknown Apps</strong></li>
+                <li>Download the APK and open it to install</li>
+                <li>Follow the on-screen instructions to complete installation</li>
+            </ol>
+            
+            <p>Note: The exact steps may vary depending on your device model and Android version.</p>
+        </div>
+
+        <a href="index.html" class="back-link">← Back to Home</a>
+    </div>
+</body>
+</html> 
